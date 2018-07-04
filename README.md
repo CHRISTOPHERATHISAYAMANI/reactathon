@@ -19,10 +19,10 @@ This is a [Medium](https://medium.com) clone built using [React.js](https://reac
 - Clap a story
 
 ### Installation
-* Git clone this repo [here](https://github.com/krissnawat/medium-clone-on-node).
+* Git clone this repo [here](https://github.com/reactathon2018/apps/tree/master/Reactars).
 * Move into the folder from your terminal:
 ```sh
-    cd medium-clone-on-node
+    cd Reactars
 ```
 * Run `npm install` to install node dependencies.
 * Start MongoDB instance: `mongod`.
@@ -47,10 +47,10 @@ This is a [Medium](https://medium.com) clone built using [React.js](https://reac
 
 
 ### Contributing
-1. Create an issue. First look through [the open issues](https://github.com/krissnawat/medium-clone-on-node/issues).
+1. Create an issue. First look through [the open issues](https://github.com/reactathon2018/apps/tree/master/Reactars).
 1. Clone the repository or fork it.
 
-         git clone https://github.com/krissnawat/medium-clone-on-node
+         git clone https://github.com/reactathon2018/apps/tree/master/Reactars
 
 
 1. Create your feature branch:
@@ -67,5 +67,3 @@ This is a [Medium](https://medium.com) clone built using [React.js](https://reac
 
 1. Submit a pull request.
 
-- Issue Tracker: https://github.com/krissnawat/medium-clone-on-node/issues
-- Source Code: https://github.com/krissnawat/medium-clone-on-node

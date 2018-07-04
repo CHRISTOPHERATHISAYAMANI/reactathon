@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import { Switch, Route } from 'react-router-dom'
 
+import RegisterForm from './components/RegisterForm'
 import Feed from './components/Feed'
 import Profile from './components/Profile'
 import ArticleView from './components/ArticleView'
@@ -32,7 +33,9 @@ class App extends Component {
                     <Route path="/profile/:id" component={Profile} />
                     <Route path="/articleview/:id" component={ArticleView} />
                     <Route path="/editor" component={requireAuthentication(Editor)} />
-                    <Route path="**" component={Feed} />
+                    <Route path="/Feed" component={Feed} />
+                    <Route path="/register" component={RegisterForm}/>
+                    <Route path="**" component={RegisterForm}/>
                 </Switch>
               
             </div>

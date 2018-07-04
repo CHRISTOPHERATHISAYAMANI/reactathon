@@ -6,12 +6,13 @@ const cloudinary = require('cloudinary')
 
 module.exports = {
     addArticle: (req, res, next) => {
-        let { text, title, claps, description } = req.body
+        let { text, title,event_id,event_name, event_desc, claps, description } = req.body
         //let obj = { text, title, claps, description, feature_img: _feature_img != null ? `/uploads/${_filename}` : '' }
-        console.log(req.files.image);
+        console.log("File Uloaded",req.files.image.path);
         if (req.files.image) {
             cloudinary.uploader.upload(req.files.image.path, (result) => {
-                let obj = { text, title, claps, description, feature_img: result.url != null ? result.url : '' }
+                let obj = { text, title:'Verizon Enterprise Solution',event_id,event_name: title, event_desc:'', claps, description, feature_img: result.url != null ? result.url : '' }
+                console.log('success');
                 saveArticle(obj)
                 /*(new Student({...{url: result.url},...req.body})).save((err, newStudent) => {
                 const cloud_res = {
@@ -34,7 +35,8 @@ module.exports = {
                 ]
             })
         }else {
-            saveArticle({ text, title, claps, description, feature_img: '' })
+            console.log('else')
+            saveArticle({ text, title:'Verizon Enterprise Solution',event_id,event_name: title, event_desc:'', claps, description, feature_img: '' })
         }
         function saveArticle(obj) {
             new Article(obj).save((err, article) => {
@@ -43,6 +45,7 @@ module.exports = {
                 else if (!article)
                     res.send(400)
                 else {
+                    console.log("saveArticle",article.event_id);
                     return article.addAuthor(req.body.author_id).then((_article) => {
                         return res.send(_article)
                     })

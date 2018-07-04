@@ -4,6 +4,9 @@ let ArticleSchema = new mongoose.Schema(
     {
         text: String,
         title: String,
+        event_id: Number,
+        event_name: String,
+        event_desc: String,
         description: String,
         feature_img: String,
         claps: Number,
@@ -32,6 +35,7 @@ ArticleSchema.methods.comment = function(c) {
 }
 ArticleSchema.methods.addAuthor = function (author_id) {
     this.author = author_id
+    this.title = 'Verizon Enterprise Solution'    
     return this.save()
 }
 ArticleSchema.methods.getUserArticle = function (_id) {

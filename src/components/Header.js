@@ -22,7 +22,7 @@ class Header extends Component {
         <div className="container-fluid col-md-10 col-md-offset-1">
             <div className="navbar-header">
                 <a className="navbar-brand" id="logo" href="/">
-                    <img alt="Stories" src="/assets/img/stories-logo.svg" height="40"/>
+                    <img alt="Stories" src="http://res.cloudinary.com/dyew3p528/image/upload/c_crop,w_399/v1530700438/vzw-logo-156-130-c.jpg" height="40"/>
                 </a>
             </div>
             <ul className="nav navbar-nav filter-links">
@@ -31,7 +31,7 @@ class Header extends Component {
 
             <div className="folding-nav">
                 <ul className="nav navbar-nav navbar-right">
-                    {this.props.isAuth ? <li className="new-post-button"><a className="button" data-behavior="trigger-overlay" href="/editor">Write a story</a></li> : ''}
+                    {this.props.isAuth ? <li className="new-post-button"><a className="button" data-behavior="trigger-overlay" href="/editor">Write a feedback</a></li> : ''}
                     {this.props.isAuth ? '' : <li onClick={this.props.openSignInWith} className="sign-in-button"><a className="button green-border-button" data-behavior="trigger-overlay" href="#">Sign in / Sign up</a></li>}
                 </ul>
             </div>
