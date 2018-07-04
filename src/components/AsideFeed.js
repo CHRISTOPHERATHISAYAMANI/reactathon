@@ -18,10 +18,11 @@ class AsideFeed extends Component {
 
                     <li className="top-stories-list-item" key={i}>
                         <div className="count-button-wrapper">
-                            <span className="count-button">{i}</span>
+                           
+                            <img alt="Stories" src={_article.feature_img} height="60"/>
                         </div>
                         <div className="top-stories-links">
-                            <a className="post-title" href={`/articleview/${_article._id}`}>{_article.title}</a><br/>
+                            <a className="post-title" href={`/articleview/${_article._id}`}>{_article.event_name}</a><br/>
                             <small>
                               <div data-react-classname="PopoverLink" data-react-props="">
                                 <span className="popover-link" data-reactroot="">

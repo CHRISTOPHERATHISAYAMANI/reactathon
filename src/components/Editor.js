@@ -45,7 +45,7 @@ class Editor extends Component {
       this.setState({
         loading: false
       })
-      console.log(res.data)
+      console.log("res Data",res.data)
     }).catch((err)=>{console.log(err); this.setState({loading: false})})
   } 
 
@@ -139,12 +139,12 @@ class Editor extends Component {
               <div className="post-metadata">
                   <img alt={this.props.user.name} className="avatar-image" src={this.props.user.provider_pic} height="40" width="40" />
                   <div className="post-info">
-                      <div data-react-className="PopoverLink" data-react-props="{&quot;user_id&quot;:608,&quot;url&quot;:&quot;/users/netk&quot;,&quot;children&quot;:&quot;netk&quot;}"><span className="popover-link" data-reactroot=""><a href="">{this.props.user.name}</a></span></div>
+                      <div data-react-classname="PopoverLink" data-react-props="{&quot;user_id&quot;:608,&quot;url&quot;:&quot;/users/netk&quot;,&quot;children&quot;:&quot;netk&quot;}"><span className="popover-link" data-reactroot=""><a href="">{this.props.user.name}</a></span></div>
                       <small>{this.props.user.email}</small>
                   </div>
               </div>
 
-              <form className="editor-form main-editor" autocomplete="off" >
+              <form className="editor-form main-editor" autoComplete="off" >
 
                 <div className={this.state.imgSrc != null ? 'file-upload-previewer' : 'file-upload-previewer hidden'}>
                   <img src="" alt="" id="image_preview"/>
@@ -167,7 +167,7 @@ class Editor extends Component {
                   <textarea id="medium-editable" className="medium-editable" ></textarea>
                 </div>
 
-              <div class="hidden">
+              <div className="hidden">
                 <input type="file" onChange={ ()=>this.previewImg()} id="file" ref="fileUploader"/>
               </div>
 

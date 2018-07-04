@@ -8,7 +8,7 @@ class EditorHeader extends Component {
     <div className="container-fluid col-md-10 col-md-offset-1">
       <div className="navbar-header">
         <a className="navbar-brand" id="logo" href="/">
-            <img alt="Stories" src="/assets/img/stories-logo.svg" height="40"/>
+            <img alt="Stories" src="http://res.cloudinary.com/dyew3p528/image/upload/c_crop,w_399/v1530700438/vzw-logo-156-130-c.jpg" height="40"/>
         </a>
       </div>
 

@@ -8,10 +8,11 @@ module.exports = {
     addArticle: (req, res, next) => {
         let { text, title, claps, description } = req.body
         //let obj = { text, title, claps, description, feature_img: _feature_img != null ? `/uploads/${_filename}` : '' }
-        console.log(req.files.image);
+        console.log("File Uloaded",req.files.image.path);
         if (req.files.image) {
             cloudinary.uploader.upload(req.files.image.path, (result) => {
                 let obj = { text, title, claps, description, feature_img: result.url != null ? result.url : '' }
+                console.log('success');
                 saveArticle(obj)
                 /*(new Student({...{url: result.url},...req.body})).save((err, newStudent) => {
                 const cloud_res = {
@@ -34,6 +35,7 @@ module.exports = {
                 ]
             })
         }else {
+            console.log('else')
             saveArticle({ text, title, claps, description, feature_img: '' })
         }
         function saveArticle(obj) {
