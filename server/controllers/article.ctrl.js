@@ -11,7 +11,11 @@ module.exports = {
         console.log("File Uloaded",req.files.image.path);
         if (req.files.image) {
             cloudinary.uploader.upload(req.files.image.path, (result) => {
+<<<<<<< HEAD
                 let obj = { text, title:'Verizon Enterprise Solution',event_id,event_name: title, event_desc:'', claps, description, feature_img: result.url != null ? result.url : '' }
+=======
+                let obj = { text, title, claps, description, feature_img: result.url != null ? result.url : '' }
+>>>>>>> 4650022dcef1eec9af166780d52b2e85f82f8fb5
                 console.log('success');
                 saveArticle(obj)
                 /*(new Student({...{url: result.url},...req.body})).save((err, newStudent) => {
@@ -36,7 +40,11 @@ module.exports = {
             })
         }else {
             console.log('else')
+<<<<<<< HEAD
             saveArticle({ text, title:'Verizon Enterprise Solution',event_id,event_name: title, event_desc:'', claps, description, feature_img: '' })
+=======
+            saveArticle({ text, title, claps, description, feature_img: '' })
+>>>>>>> 4650022dcef1eec9af166780d52b2e85f82f8fb5
         }
         function saveArticle(obj) {
             new Article(obj).save((err, article) => {

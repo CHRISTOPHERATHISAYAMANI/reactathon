@@ -21,3 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 /src - Copy
+server/controllers/article.ctrl.js
+server/models/Article.js

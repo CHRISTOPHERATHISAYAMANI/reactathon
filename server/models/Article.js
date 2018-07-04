@@ -6,7 +6,12 @@ let ArticleSchema = new mongoose.Schema(
         title: String,
         event_id: Number,
         event_name: String,
+<<<<<<< HEAD
         event_desc: String,
+=======
+        event_description: String,
+        event_img: String,
+>>>>>>> 4650022dcef1eec9af166780d52b2e85f82f8fb5
         description: String,
         feature_img: String,
         claps: Number,
